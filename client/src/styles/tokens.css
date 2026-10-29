@@ -1,0 +1,107 @@
+/* Design tokens: every colour, font, radius, shadow and timing used in the app.
+   Components only use these variables, so dark mode is just a second set of values. */
+
+:root {
+  color-scheme: light dark;
+
+  /* Surfaces */
+  --c-band: #13303a; /* top bar and page headers */
+  --c-band-2: #1b3f4b;
+  --c-page: #eef1f0;
+  --c-card: #fbfbf8;
+  --c-line: #d5dcda;
+  --c-mute-bg: #e3e8e6;
+
+  /* Text */
+  --c-text: #13303a;
+  --c-text-2: #3e555d;
+  --c-text-3: #62767d;
+  --c-on-band: #eef1f0;
+  --c-on-band-2: rgba(238, 241, 240, 0.72);
+
+  /* Actions and accents */
+  --c-primary: #f2a33a; /* marigold */
+  --c-primary-hover: #e8921f;
+  --c-on-primary: #13303a; /* dark text on marigold */
+  --c-accent: #b5346b; /* rhododendron */
+  --c-success: #2f7a5a; /* pine green: verified, success */
+  --c-success-bg: #e2f0e9;
+  --c-warn: #8a5300;
+  --c-warn-bg: #fff1da;
+  --c-danger: #b23a3a;
+  --c-danger-bg: #fbe9e9;
+  --c-focus: #f2a33a;
+  --c-overlay: rgba(10, 26, 31, 0.55);
+
+  /* Type */
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: clamp(2rem, 1.4rem + 2.4vw, 2.75rem);
+  --fs-4xl: clamp(2.4rem, 1.6rem + 3.4vw, 3.5rem);
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 16px; /* only for real objects: stays, results, forms */
+  --radius-pill: 999px;
+
+  /* Depth */
+  --shadow-1: 0 1px 2px rgba(19, 48, 58, 0.06), 0 1px 3px rgba(19, 48, 58, 0.08);
+  --shadow-2: 0 10px 28px rgba(19, 48, 58, 0.14);
+  --shadow-3: 0 18px 48px rgba(19, 48, 58, 0.22);
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* Layout */
+  --max-w: 1120px;
+  --topbar-h: 64px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur: 250ms;
+}
+
+/* Dark theme follows the device setting */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-band: #0b1d23;
+    --c-band-2: #12303a;
+    --c-page: #0f2026;
+    --c-card: #162b32;
+    --c-line: #28464f;
+    --c-mute-bg: #20373e;
+
+    --c-text: #e6eeec;
+    --c-text-2: #b7c7c5;
+    --c-text-3: #8ea5a8;
+
+    --c-primary-hover: #f6b558;
+    --c-accent: #e283ad;
+    --c-success: #6fcca0;
+    --c-success-bg: #143529;
+    --c-warn: #f4c67c;
+    --c-warn-bg: #3a2b12;
+    --c-danger: #f09c9c;
+    --c-danger-bg: #3d1c1c;
+    --c-overlay: rgba(0, 0, 0, 0.6);
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-2: 0 10px 28px rgba(0, 0, 0, 0.4);
+    --shadow-3: 0 18px 48px rgba(0, 0, 0, 0.5);
+  }
+}
